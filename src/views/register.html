@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Register</title>
+   </head>
+   <body class="container mx-auto py-12">
+      <form action="/api/users/register" method="post">
+         <input type="email" name="email" placeholder="Enter your email" class="border border-gray-300 p-2 rounded-md mb-4" />
+         <button type="submit" class="bg-emerald-500 text-white p-2 rounded-md">Register</button>
+      </form>
+
+      <div class="mt-20">
+         <h1 class="text-2xl font-bold">API usage</h1>
+
+         <p class="font-semibold text-md uppercase mt-5">GET</p>
+         <pre class="text-pink-500">/api/jokes</pre>
+
+         <div class="mt-5">
+            <p>
+              Query parameters:
+              <ul>
+                <li><b>limit:</b> number of jokes to return (max 100)</li>
+              </ul>
+            </p>
+          </div>
+          <div class="mt-5">
+            <p>
+              Authentication:
+              <ul>
+                <li><b>bearer:</b> the token you get after registering</li>
+              </ul>
+            </p>
+          </div>
+          <div class="mt-5">
+            <p>
+             Rate limit:
+              <ul>
+                <li><b>20 requests per minute:</b>
+                as this is a demo app with a free API, the rate limit is set to 20 requests per minute. You can self host this tho</li>
+                </li>
+              </ul>
+            </p>
+          </div>
+      </div>
+   </body>
+</html>

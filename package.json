@@ -1,0 +1,33 @@
+{
+   "name": "bun",
+   "module": "src/index.ts",
+   "type": "module",
+   "scripts": {
+      "dev": "bun --watch src/index.ts",
+      "db:generate": "bun drizzle-kit generate",
+      "db:push": "bun drizzle-kit push",
+      "db": "bun db:generate && bun db:push"
+   },
+   "devDependencies": {
+      "@eslint/js": "^9.11.1",
+      "@types/bun": "latest",
+      "drizzle-kit": "^0.24.2",
+      "eslint": "^9.11.1",
+      "globals": "^15.9.0",
+      "typescript-eslint": "^8.7.0"
+   },
+   "peerDependencies": {
+      "typescript": "^5.0.0"
+   },
+   "dependencies": {
+      "@hono/zod-validator": "^0.3.0",
+      "@libsql/client": "^0.14.0",
+      "@rlimit/http": "^0.0.5",
+      "@t3-oss/env-core": "^0.11.1",
+      "drizzle-orm": "^0.33.0",
+      "hono": "^4.6.3",
+      "pino": "^9.4.0",
+      "pino-pretty": "^11.2.2",
+      "zod": "^3.23.8"
+   }
+}
